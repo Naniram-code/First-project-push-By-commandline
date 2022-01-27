@@ -1,0 +1,114 @@
+Git = Code Version Control System => Git commands | like Git -> SVN
+GitHub = Central Repository | like GitHub -> Bitbucket
+
+1. open source
+2. to maintain project being performed parallely within the team and achieve continious updates in project without issue.
+
+3. Download Git & install
+4. Create account in GitHub (common central repository)
+5. Git command communicates with GitHub repository to push/pull codes
+6. GitHub will smartly merge new codes with the old codes already present in the respository
+7. sometime might show merge conflict - if 2 or more people writes same code - where merging can only be done after conflict resolution manually
+
+8. instead of Git command = tools to communicate with GitHub respository - Tortoise Git/Eclipse/Intellij
+
+9. Git command - https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+
+######Steps in command prompt to push code#########
+
+10. Tell git who you are -
+	git config --global user.name "name"
+	git config --global user.email "email address"
+
+11. Create folder and put files to be pushed in GitHub - also create respository in GitHub where code is going to be pushed 
+	- then go to folder va command prompt
+	cd folder path
+
+12. Initialize as Git repository -
+	git init
+
+13. Add Git code to stagging -
+	git add *
+	git add <file name> (if you are going to add specific file)
+
+14. To check the status of stagged code -
+	git status
+
+15. To commit the code that is in stagging -
+	git commit -m "message to commit"
+
+16. Defining which branch are you pushing
+	git branch -M main
+
+17. Provide location of respository where code needs to be pushed to establish connection between location folder and remote folder -
+  	git remote add origin repository path
+
+18. Then push to master branch -
+	git push -u origin main
+
+19. Then provide credentials for GitHub account -
+	username - 
+	password - access token
+
+20. Code will get pushed into the GitHub repository - refresh the GitHub page - you will be able to see fresh code with the message provided will commiting
+
+
+########Steps to extract code from repository#####
+
+20. To extract the code for the first time from the GitHub -
+	- within the folder do
+	git clone link of the repository
+
+21. For update later no need clone -
+	git pull link of the repository
+
+22. to create new branch
+	git branch branchName
+23. to switch to new branch
+	git checkout branchName
+24. to merge new branch to master
+	first - git checkout master
+	then - git merge branchName
+25. to create new branch content in new branch in gitHub
+	git push origin branchName
+26. to merge into master branch from new branch in gitHub
+	raise pull request, then accept it and merge
+	or, push master that is merged in local repo to master in GitHub
+
+
+27. to pull specific files from repo
+	git checkout master -- index.php
+	
+
+
+Sequence:
+1. Pushing project/file for the first time:
+	Initialize the folder(adding .git) -> stagging -> commit ->push
+2. Pushing changes afterwards:
+	stagging -> commit ->push
+3. First time pulling project into the device:
+	Initialize the folder(adding .git)->clone from remote repository (GitHub) into the folder
+4. Pulling changes afterwards:
+	Pull command
+
+
+	(Jacob)V1 => GitHub <= V2(John) <=V3(Jerry) <=V4(Tom)
+
+			(Dev)QA1<->Remote GitHub Repo<->QA2(Dev)
+					(QA3)(Dev)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
